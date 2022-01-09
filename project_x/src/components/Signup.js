@@ -9,7 +9,7 @@ export default function Signup(){
     const { signup } = useAuth()
 
     function handleSubmit(event){
-        event.prevenDefault()
+        event.preventDefault()
 
         signup(emailRef.current.value, passwordRef.current.value)
     }
