@@ -49,7 +49,7 @@ export default function Login(){
                
             </Card>
             <div className="w-100 text-center mt-2">
-                Add an account? <Link to="/signup"> Sign Up</Link>
+                Add an account? <Link to="/"> Sign Up</Link>
             </div>
         </>
     )
