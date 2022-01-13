@@ -4,8 +4,8 @@ import { Container } from "react-bootstrap"
 import { AuthProvider } from "./contexts/AuthContext"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //import Switch from "react-switch"
-import Dashboard from "./Dashboard"
-import Login from "./Login"
+import Dashboard from "./Dashboard";
+import Login from "./Login";
 function App() {
   return (
       <Container className="d-flex align-items-center justify-content-center"
