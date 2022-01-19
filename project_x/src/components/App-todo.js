@@ -7,7 +7,7 @@ import "./Todo.css";
   rel="stylesheet"
 ></link>;
 
-function App() {
+function Apptodo() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
   console.log(input);
@@ -82,4 +82,4 @@ function App() {
   );
 }
 
-export default App;
+export default Apptodo;

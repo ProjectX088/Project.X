@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //import Switch from "react-switch"
 import Dashboard from "./Dashboard";
 import Login from "./Login";
+import TODO from "./App-todo";
 function App() {
   return (
       <Container className="d-flex align-items-center justify-content-center"
@@ -14,7 +15,7 @@ function App() {
           <Router> 
             <AuthProvider>
               <Routes> 
-                <Route path="/dashboard" element={<Dashboard/>} />
+                <Route path="/dashboard" element={<TODO/>} />
                 <Route path="/" element={<Signup/>} />
                 <Route path="/login" element={<Login/>} />
               </Routes>
