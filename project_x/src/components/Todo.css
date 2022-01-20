@@ -50,7 +50,10 @@ nav {
   font-family: "Press Start 2P";
   font-size: 20px;
 }
-
+.Name{
+  display: flex;
+  align-items: left;
+}
 .Checkbox {
   margin-left: 5;
   display: flex;

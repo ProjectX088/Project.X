@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Button, Input } from "@mui/material";
 import Todo from "./Todo.js";
 import "./Todo.css";
+
+import { useAuth } from "./contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
+
 <link
   href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
   rel="stylesheet"
@@ -19,18 +23,37 @@ function Apptodo() {
     console.log(todos);
   };
 
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const navigate = useNavigate()
+  
+    async function handleLogout() {
+      setError("")
+  
+      try {
+        logout()
+        navigate('/login')
+      } catch {
+        setError("Failed to log out")
+      }
+    }
+
   return (
     <div>
       <nav>
         <div className="Logo">
           <a>Project X</a>
         </div>
+        <div className="Name">
+          {currentUser.email}
+        </div>
         <ul className="nav-links">
           <a aria-current="page" href="#">
             Home
           </a>
-          <a href="#">Login</a>
-          <a>Disabled</a>
+          <Button variant="link" onClick={handleLogout}>
+            Log Out
+          </Button>
         </ul>
       </nav>
       <div

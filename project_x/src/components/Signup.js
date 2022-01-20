@@ -21,7 +21,7 @@ export default function Signup(){
             setError("")
             setLoading(true)
             signup(emailRef.current.value, passwordRef.current.value)
-            navigate('/')
+            navigate('/dashboard')
         }catch {
             setError("Failed to create an account")
         }
